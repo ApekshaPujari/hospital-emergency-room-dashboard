@@ -1,212 +1,133 @@
-- Hospital Emergency Room Dashboard
+Hospital Emergency Room Dashboard
 
 - Introduction
 
-This dashboard was built to help hospital management understand Emergency Room patient flow, waiting time, patient satisfaction, referrals, and admission patterns. It provides both monthly and consolidated views, along with patient-level details, to help identify operational trends and areas that may require attention.
+An interactive dashboard built to analyze Emergency Room patient flow, waiting time, patient satisfaction, referrals, admission patterns, and performance against the 30-minute wait-time target to support healthcare operational decision-making.
 
-- Dashboard Breakdown Framework
+- Purpose 
 
-- 1. Start with the Business Problem
+The Hospital Emergency Room Dashboard is an interactive Business Intelligence solution developed to analyze and visualize Emergency Room patient data. The dashboard provides a centralized view of key operational metrics, helping hospital management monitor patient volume, waiting time, patient satisfaction, referrals, admission patterns, and whether patients are being seen within the 30-minute target.
 
-The hospital's emergency department was handling a large number of patients, but management needed a clearer view of patient volume, waiting times, admission status, referrals, satisfaction, and patient demographics.
+The dashboard includes Monthly View, Consolidated View, and Patient Details to provide both high-level performance monitoring and patient-level analysis.
 
-The challenge was to bring these different aspects together in one dashboard so that decision-makers could quickly understand:
+This dashboard is designed for hospital management and healthcare decision-makers who need quick access to meaningful insights for improving patient flow, resource planning, and operational efficiency.
 
-- How many patients are visiting the emergency room
-- How long patients are waiting
-- Whether patients are being seen within the target time
-- How satisfied patients are
-- How many patients are being referred to other departments
-- Which age groups and patient demographics represent the highest patient volume
-- Which departments receive the most referrals
-- When the emergency department experiences higher patient traffic
+- Tech Stack - The dashboard was built using the following tools and technologies:
 
-- 2. Define the Goal of the Dashboard
+1. Power Query - Used for data cleaning, transformation, and preparation.
+2. DAX (Data Analysis Expressions) - Used to create calculated measures and KPIs for analyzing patient volume, waiting time, satisfaction, referrals, and admission patterns.
+3. Data Modeling - Used to structure and connect the data for accurate calculations and interactive analysis.
+4. Power BI Visualizations - Used KPI Cards, Donut Charts, Bar Charts, Line Charts, Heatmaps, and Tables for data storytelling.
 
-The goal of this dashboard was to provide a 360-degree view of Emergency Room performance.
+- Data Source - Dataset: Hospital Emergency Room Dataset (Educational / Portfolio Dataset)
 
-The dashboard was designed to help management:
+- The dataset contains Emergency Room patient records including:
 
-- Monitor patient volume and emergency room activity
-- Track average patient waiting time
-- Monitor patient satisfaction
-- Evaluate the percentage of patients seen within 30 minutes
-- Understand admission and non-admission patterns
-- Analyze patient demographics
-- Identify departments receiving the highest number of referrals
-- Identify busy days and hours
-- Drill down into individual patient records when more detail is required
+1. Patient ID
+2. Patient Name
+3. Patient Gender
+4. Patient Age
+5. Patient Admission Date
+6. Patient Race
+7. Patient Wait Time
+8. Patient Satisfaction Score
+9. Department Referral
+10. Admission Status
+11. Patient Seen Within 30 Minutes
 
-- 3. Walk Through the Key Visuals
+The data is used to demonstrate data analysis, dashboard development, and business intelligence techniques.
 
-- Monthly View
+- Business Problem
 
-The Monthly View provides a detailed look at Emergency Room performance for a selected month.
+Hospital Emergency Rooms handle a large number of patients with different needs, making it difficult to monitor operational performance using raw patient-level data.
 
-At the top, the KPI cards highlight four important metrics:
+Hospital management needs answers to questions such as:
 
-- Number of Patients
-- Average Wait Time
-- Patient Satisfaction Score
-- Number of Patients Referred
+1. How many patients are visiting the Emergency Room?
+2. What is the average patient waiting time?
+3. Are patients being seen within the 30-minute target?
+4. What percentage of patients are admitted?
+5. How satisfied are patients with their Emergency Room experience?
+6. Which departments receive the most referrals?
+7. Which age groups contribute the highest patient volume?
+8. What are the busiest days and hours?
+9. How do patient volume, waiting time, satisfaction, and referrals change over time?
 
-The trend charts below each KPI help understand how these metrics change throughout the selected month.
+Without an interactive dashboard, answering these questions requires manual analysis and significant effort.
 
-- Patient Admission Status
+- Goal of the Dashboard
 
-The admission status visual compares Admitted vs. Not Admitted patients and shows their percentage of total patients.
+The goal of this dashboard is to provide an interactive view of Emergency Room operational performance. It helps hospital management monitor key KPIs, analyze patient waiting times, evaluate performance against the 30-minute target, understand admission and referral patterns, identify patient demographics, and analyze patient traffic by day and hour.
 
-For April 2024, the dashboard shows 469 patients, with 217 admitted and 252 not admitted.
+- Dashboard Structure
 
-- Patients Seen Within 30 Minutes
+The dashboard consists of three sheets:
 
-The donut chart tracks whether patients were seen within the hospital's 30-minute target.
+1. Monthly View – Provides a detailed analysis of Emergency Room performance for a selected month.
+2. Consolidated View – Provides an overall view of Emergency Room performance and trends across the available period.
+3. Patient Details – Provides patient-level information for detailed analysis and drill-down.
 
-This allows management to quickly identify whether the Emergency Room is meeting its service-level target.
+- Walkthrough of Key Visuals
 
-- Patients by Age Group
+1. KPI Cards – Display key metrics including Total Patients, Average Wait Time, Patient Satisfaction Score, and Patients Referred for a quick overview of Emergency Room performance.
 
-The age-group chart breaks down patient volume across different age categories, making it easier to identify which age groups are contributing the most to Emergency Room activity.
+2. Monthly Performance Trends – Shows how patient volume, waiting time, satisfaction, and referrals change throughout the selected month.
 
-- Patients by Gender
+3. Consolidated Monthly Trends – Tracks key Emergency Room metrics over time to identify changes and operational patterns.
 
-The gender breakdown provides an overview of the distribution of male and female patients, along with patients whose gender was not confirmed.
+4. Admission Status – Compares admitted and non-admitted patients to understand overall admission patterns.
 
-- Patients by Department Referral
+5. Patients Seen Within 30 Minutes – Compares patients who were seen within the 30-minute target against those who exceeded the target.
 
-This visual highlights the departments receiving Emergency Room referrals.
+6. Patients by Age Group – Shows the distribution of Emergency Room patients across different age groups.
 
-- Patients by Race
+7. Patients by Gender – Displays the gender distribution of Emergency Room patients.
 
-The dashboard also provides a demographic breakdown by patient race, allowing management to understand the composition of the patient population.
+8. Patients by Department Referral – Identifies which departments receive the highest number of Emergency Room referrals.
 
-- Patients by Day and Hour
+9. Patients by Race – Provides a demographic overview of the patient population.
 
-The heatmap shows patient volume by day of the week and hour of the day.
+10. Patients by Day and Hour – Uses a heatmap to identify variations in patient traffic across different days and hours.
 
-This can help identify periods of higher patient traffic and support better staffing and resource planning.
+11. Patient Details Table – Provides patient-level information including patient ID, age, gender, admission date, wait time, referral department, and admission status.
 
-- Consolidated View
+- Business Impact & Insights
 
-The Consolidated View provides an overall view of Emergency Room performance across the selected date range.
+This dashboard helps hospital management:
 
-Unlike the Monthly View, which focuses on a specific month, this sheet allows management to understand the overall trends and patient population.
+1. Monitor Emergency Room patient volume and operational performance.
+2. Track average patient waiting time.
+3. Monitor whether patients are being seen within the 30-minute target.
+4. Identify periods with higher patient traffic for better staffing and resource planning.
+5. Understand admission and referral patterns.
+6. Identify departments receiving higher referral volumes.
+7. Analyze patient demographics.
+8. Monitor patient satisfaction.
+9. Investigate patient-level records when detailed analysis is required.
+10. Support faster, data-driven healthcare operational decisions.
 
-- Key KPIs
+- Key Insights
 
-The dashboard summarizes:
+The dashboard highlights several important operational insights:
 
-- 9K total patients
-- 35.3-minute average wait time
-- 4.99 patient satisfaction score
-- 4K patients referred
+1. The overall average patient waiting time is approximately 35 minutes, which is above the 30-minute target.
 
-These KPIs provide a quick overview of the Emergency Room's overall performance.
+2. Approximately 57% of patients were seen within 30 minutes, while around 43% exceeded the target.
 
-- Monthly Trends
+3. Patient traffic varies by day and hour, highlighting opportunities for better staffing and resource allocation.
 
-The KPI trend charts show how patient volume, waiting time, satisfaction score, and referrals change month by month.
+4. Referral volumes vary across departments, with General Practice and Orthopedics among the major referral destinations.
 
-This allows management to identify periods where Emergency Room activity or performance changes significantly.
+5. Patient volume is distributed across multiple age groups, providing insight into the overall Emergency Room patient population.
 
-- Admission Status
+- Dashboard Preview
 
-The consolidated admission chart shows an almost even split between admitted and non-admitted patients, providing a high-level view of patient outcomes.
+<img width="1755" height="1241" alt="hospital-emergency-room-dashboard-1_page-0001" src="https://github.com/user-attachments/assets/04c79594-39b6-41d0-8d99-bc4ab4684b85" />
 
-- Patients Seen Within 30 Minutes
+<img width="1755" height="1241" alt="hospital-emergency-room-dashboard-2_page-0001" src="https://github.com/user-attachments/assets/eeb6dc63-f948-4839-9569-1846f2deb6ce" />
 
-The chart compares patients who were seen within the 30-minute target against those who missed the target.
+<img width="1755" height="1241" alt="hospital-emergency-room-dashboard-3_page-0001" src="https://github.com/user-attachments/assets/a883fe14-5526-4cb4-b3cf-63c1c30d799c" />
 
-This is particularly useful for monitoring Emergency Room service efficiency.
 
-- Age Group and Gender
 
-The demographic visuals show patient distribution by age group and gender, helping management understand the overall patient population.
-
-- Department Referral
-
-The referral chart highlights which departments receive the greatest number of Emergency Room referrals.
-
-- Patient Race
-
-The race distribution provides another demographic perspective on the overall patient population.
-
-- Day and Hour Analysis
-
-The day-and-hour heatmap provides a detailed view of when patient traffic is highest.
-
-This can be used to identify peak periods and support staffing decisions.
-
-Patient Details
-
-The Patient Details sheet provides a patient-level view of the underlying Emergency Room data.
-
-Instead of looking only at aggregated KPIs, users can drill down into individual patient records.
-
-- The table includes:
-
-- Patient ID
-- Patient Name
-- Patient Gender
-- Patient Age
-- Patient Admission Date
-- Patient Race
-- Patient Wait Time
-- Department Referral
-- Admission Status
-
-This sheet can help users investigate individual records behind the aggregated dashboard metrics.
-
-For example, management could use it to understand the patient records associated with longer waiting times, referrals, or different admission outcomes.
-
-- 4. Highlight the Key Insights
-
-From the dashboard, several operational patterns can be identified.
-
-- 1. Waiting Time Requires Monitoring
-
-The consolidated dashboard shows an overall average waiting time of approximately 35 minutes, which is higher than the 30-minute target used in the dashboard.
-
-This makes waiting-time performance an important area for operational monitoring.
-
-- 2. Not All Patients Are Seen Within the Target
-
-The dashboard shows that approximately 59% of patients were seen within 30 minutes, while approximately 41% missed the target.
-
-This indicates an opportunity to investigate the causes of delays and improve Emergency Room throughput.
-
-- 3. Emergency Room Demand Varies by Time
-
-The day-and-hour analysis shows that patient volumes vary throughout the day and across different days of the week.
-
-This can help identify periods where additional staffing or resources may be required.
-
-- 4. Referrals Are Concentrated in Certain Departments
-
-The department referral analysis shows that referrals are not evenly distributed across departments.
-
-General Practice and Orthopedics stand out among the major referral destinations, which could help management evaluate resource requirements in these departments.
-
-- 5. Patient Volume Is Distributed Across Multiple Age Groups
-
-The age-group analysis shows that Emergency Room activity is spread across different age categories rather than being concentrated entirely within one group.
-
-This provides useful context for understanding the overall patient population.
-
-5. Show the Business Impact
-
-The dashboard can support hospital management in making data-driven operational decisions.
-
-Potential business applications include:
-
-- Optimizing staff allocation during peak Emergency Room hours
-- Monitoring and improving patient waiting times
-- Identifying periods when the 30-minute service target is frequently missed
-- Improving patient experience and satisfaction
-- Planning resources for departments receiving high referral volumes
-- Understanding patient demographics
-- Monitoring admission and referral patterns
-- Investigating individual patient records when deeper analysis is required
-
-Overall, the dashboard transforms raw Emergency Room data into actionable operational insights that can support better staffing, patient-flow management, and service improvement.
 
